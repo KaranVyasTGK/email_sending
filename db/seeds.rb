@@ -1,0 +1,2 @@
+user = User.create!(name: "Karan", email: "karan@mail.com", profession: "Software Engineer", contect: "8511581101", address: "as dsad ad adasddasdas", password: "12345678")
+puts "========#{user.inspect}========"

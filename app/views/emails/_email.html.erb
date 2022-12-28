@@ -1,0 +1,5 @@
+<div id="<%= dom_id email %>">
+  <td><%= email.title %></td>
+  <td><%= email.body.to_plain_text.truncate(5) %></td>
+  <td><%= email.is_star? ? "Star" : "" %></td>
+</div>

@@ -1,0 +1,30 @@
+<%= search_form_for @q , class: "d-flex" do %>
+  <%= text_field_tag :search, params[:search], autocomplete: 'off', placeholder: "Search", class: 'form-control me-2' %>
+    <button class="btn btn-outline-success" type="submit">
+      Search
+    </button>
+  </span>
+<% end %>
+
+<p style="color: green"><%= notice %></p>
+
+<h1>Inbox</h1>
+
+<div id="emails">
+  <table class="table table-hover">
+    <thead>
+      <th>Subject</th>
+      <th>Body</th>
+      <th>Star<i class='fa fa-star-o' aria-hidden='true'></i></th>
+    </thead>
+    <tbody>
+      <% @emails.each do |email| %>
+        <tr>
+          <%= render email %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to "New email", new_email_path %>
