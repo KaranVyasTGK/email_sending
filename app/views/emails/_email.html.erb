@@ -1,5 +1,6 @@
 <div id="<%= dom_id email %>">
   <td><%= email.title %></td>
-  <td><%= email.body.to_plain_text.truncate(5) %></td>
+  <td><%= email.body.to_plain_text %></td>
   <td><%= email.is_star? ? "Star" : "" %></td>
+  <td><%= link_to 'Show', email_path(email) %></td>
 </div>

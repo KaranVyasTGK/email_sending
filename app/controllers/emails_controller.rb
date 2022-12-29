@@ -3,9 +3,9 @@ class EmailsController < ApplicationController
 
   # GET /emails or /emails.json
   def index
-    @q = current_user.emails.ransack(params[:search])
-    puts "=========#{@q.inspect}"
+    @q = current_user.emails.ransack(params[:q])
     @emails = @q.result
+    puts "=========#{@emails.count}========"
   end
 
   # GET /emails/1 or /emails/1.json
